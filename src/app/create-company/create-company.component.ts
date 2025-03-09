@@ -15,7 +15,9 @@ import { HttpClientModule } from "@angular/common/http";
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule, HttpClientModule],
   template: `
-    <div class="p-8 mt-[50px] max-w-lg mx-auto bg-white shadow-2xl rounded-lg">
+    <div
+      class="p-8 mt-[50px] mb-[180px]  max-w-lg mx-auto bg-white shadow-2xl rounded-lg"
+    >
       <h1 class="text-4xl font-bold text-sky-900 mb-6">Create Company</h1>
       <form
         [formGroup]="createCompanyForm"
@@ -164,7 +166,7 @@ export class CreateCompanyComponent {
     this.createCompanyForm = this.fb.group({
       accountName: ["", Validators.required],
       bankName: ["", Validators.required],
-      currentBalance: ["", [Validators.required, Validators.min(0)]], // Add min validator
+      currentBalance: ["", [Validators.required, Validators.min(0)]],
       branchName: ["", Validators.required],
     });
   }

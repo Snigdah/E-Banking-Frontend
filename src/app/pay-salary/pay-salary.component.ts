@@ -15,7 +15,9 @@ import { PaySalaryService } from "../services/pay-salary.service";
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule, HttpClientModule],
   template: `
-    <div class="p-8 mt-[50px] max-w-lg mx-auto bg-white shadow-2xl rounded-lg">
+    <div
+      class="p-8 mt-[50px] mb-[180px]  max-w-lg mx-auto bg-white shadow-2xl rounded-lg"
+    >
       <h1 class="text-4xl font-bold text-sky-900 mb-6">Pay Salary</h1>
       <form
         [formGroup]="paySalaryForm"
